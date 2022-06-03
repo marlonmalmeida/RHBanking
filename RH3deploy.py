@@ -13,8 +13,8 @@ import streamlit as st
 from io import BytesIO
 #from pyxlsb import open_workbook as open_xlsb
 
-st.title("Análise RH ")
-st.subheader("Arquivo XLSX - Abaixo os Códigos dos Clientes com ou sem predição de default")
+st.title("Análise PDI ")
+st.subheader("Preencha as informações abaixo e depois Clique em Analisar para Visualizar Seu PDI Completo.Caso queira,você poderá fazer Download para Acompanhamento.")
 st.write('\n\n')
 
 name = st.text_input('Coloque Seu Nome')
