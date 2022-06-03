@@ -11,7 +11,7 @@ from st_aggrid import AgGrid
 import pandas as pd
 import streamlit as st
 from io import BytesIO
-from pyxlsb import open_workbook as open_xlsb
+#from pyxlsb import open_workbook as open_xlsb
 
 st.title("Análise RH ")
 st.subheader("Arquivo XLSX - Abaixo os Códigos dos Clientes com ou sem predição de default")
@@ -247,7 +247,6 @@ if st.button('Analisar'):
     st.download_button(label='📥 Download Current Result',
                                 data=df_xlsx ,
                                 file_name= 'df_test.xlsx')
-
 
 
 
