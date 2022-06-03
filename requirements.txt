@@ -3,6 +3,4 @@ pandas==1.2.2
 streamlit==1.7.0
 sklearn < 1.8.0
 streamlit-aggrid==0.2.3-2
-simplejson
-pyxlsb
-xls
+
