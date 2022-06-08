@@ -33,7 +33,7 @@ cargo_atual_select = st.selectbox('Selecione qual seu cargo atual:',('Caixa','Ge
 st.write('You selected:', cargo_atual_select)
 
 
-certifica = st.multiselect('Possui Alguma Certificação:',['CPA10','CPA20','CEA','CFP','CFA','Outras'])
+certifica = st.multiselect('Possui Alguma Certificação:',['CPA10','CPA20','CEA','CFP','Outras','Nenhuma'])
 st.write('You selected:', certifica)
 
 
@@ -101,6 +101,20 @@ if st.button('Analisar'):
         livro_sugerido50 = 'Leitura do Livro: Livre'
         curso_sugerido25 = 'Curso: Zoom: Visão globalizada'
         filme_sugerido50 = 'Filme: Wall Street: O dinheiro nunca dorme'
+    if cargo_almeja == 'Gerente Assistente':
+        livro_sugerido_geral = 'O caçador de Pipas. Autor: Khaled Hosseini'
+        curso_sugerido_geral = 'Curso: Aprenda a usar o Stress a seu favor'
+        hab75_geral = 'Estágio 1 Semana Gerente Exclusive e/ou PJ'
+        hab75 = 'Delegá-lo Acompanhar Produção de um Produto'
+        hab_100_geral = 'Negociar com um cliente uma linha de crédito com Supervisão'
+        hab_100 = 'Montar Planejamento da sua semana e apresentar ao Gerente.'
+        desempenho25 = 'Leitura Manual Pade'
+        desempenho50 ='Reunião detalhamento orçado e realizado'
+        desempenho75 = 'Apresentação Pade aos colegas'
+        desempenho100 = 'Apresentar orçado e realizado com destaque aos principais produtos'	
+        hardskill50 = 'Curso Matemática Financeira'
+        hardskill75 = 'Visita a um cliente' 
+        hardskill100 = 'Curso sobre Finanças Pessoais'
     if cargo_almeja == 'Gerente PJ':
         livro_sugerido_geral = 'A Arte de Argumentar - Gerenciando Razão e Emoção.Autor: Antonio Suarez'
         curso_sugerido_geral = 'Teoria e Prática na Negociação'
@@ -185,15 +199,31 @@ if st.button('Analisar'):
         hardskill50 = 'Curso Liderança'
         hardskill75 = 'Aprender sobre diversas contas e razões contábeis '
         hardskill100 = 'Curso sobre Gestão de Pessoas'
+    if certifica == ['Nenhuma']:
+        certifica25 = 'Inscrição Curso 10 Integra a realizar em até 2 meses'
+        certifica50 = 'Inscrição para Prova de 2 a 3 meses após estudo'
+        certifica100 = 'Fazer escola sobre o que aprendeu com certificação para os demais colegas' 
     if certifica == ['CPA10']:
         certifica25 = 'Inscrição Curso CPA20 Integra a realizar em até 2 meses'
         certifica50 = 'Inscrição para Prova de 2 a 3 meses após estudo'
+        certifica100 = 'Fazer escola sobre o que aprendeu com certificação para os demais colegas'
+    if certifica == ['Outras']:
+        certifica25 = 'Verificar Aderência de Sua Certificação'
+        certifica50 = 'Planejar próxima Cerficiação ou Atributos Necessários ao Cargo que Deseja'
         certifica100 = 'Fazer escola sobre o que aprendeu com certificação para os demais colegas'
     if certifica == ['CPA10','CPA20']:
         certifica25 = 'Inscrição Curso CEA a realizar em até 2 meses'
         certifica50 = 'Inscrição para Prova'
         certifica100 = 'Fazer escola sobre o que aprendeu com certificação para os demais colegas'
+    if certifica == ['CPA20']:
+        certifica25 = 'Inscrição Curso CEA a realizar em até 2 meses'
+        certifica50 = 'Inscrição para Prova'
+        certifica100 = 'Fazer escola sobre o que aprendeu com certificação para os demais colegas'
     if certifica == ['CPA10','CPA20','CEA']:
+        certifica25 = 'Inscrição Curso CFP'
+        certifica50 = 'Inscrição para Prova de 6 a 8 meses após estudo'
+        certifica100 = 'Se preparar para CFA'
+    if certifica == ['CEA']:
         certifica25 = 'Inscrição Curso CFP'
         certifica50 = 'Inscrição para Prova de 6 a 8 meses após estudo'
         certifica100 = 'Se preparar para CFA'
